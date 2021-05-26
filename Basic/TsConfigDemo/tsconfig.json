@@ -1,0 +1,41 @@
+{
+    /*
+        ** means any dir
+        * means any files
+
+        exclude default value is "node_modules, bower_components, jspm_packages"
+    */
+
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./src/hello/**/*"
+    ],
+    "compilerOptions": {
+        // specify compile into es version
+        "target":"es6",
+        // set es6 and commonjs to see the different
+        "module": "es6",
+        // normally we don't need to edit lib. you can specify dom when run it on node env
+        // "lib":["dom"],
+        "outDir": "./dist",
+        // merge global variant into one file, but fail if using module
+        // "outFile": "./dist/app.js",
+        "allowJs": true,
+        "checkJs": true,
+        "removeComments": true,
+        // do not create compile files, if just wanna to check ts file
+        "noEmit": false,
+        // if error, do not generate compile files
+        "noEmitOnError": true,
+
+        // main switch controller, recommend to set all below into true, to make code strong
+        "strict": false,
+        "alwaysStrict": true,
+        // do not recommend to use it
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true
+    }
+}
